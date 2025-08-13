@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f0eb;
+            margin: 0;
+            padding: 0;
+        }
+        .containers {
+            width: 100vw;
+            height: 100vh;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        /* section{
+            border: 2px solid red;
+        } */
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo i{
+            font-size: 1.5rem;
+        }
+        .logo img {
+            width: 30px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 6px 0;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 8px;
+            background-color: #ff7900;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #e86d00;
+        }
+        .link {
+            text-align: center;
+            margin: 10px 0;
+            color: #777;
+            font-size: 14px;
+        }
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #f0ecea;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+           
+
+        }
+        .social-login {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .social-login img {
+            width: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .languages {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #777;
+        }
+        .languages a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #777;
+        }

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+ 
+</head>
+<body>
+   
+    <div class="containers">
+    <section> 
+    <div class="logo">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <img src="{% static 'img/ok.png' %}" alt="Logo">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+
+   <form method="POST">
+    {% csrf_token %}
+    <label>Телефон или адрес эл. почты</label>
+    <input type="text" name="username" required>
+
+    <label>Пароль</label>
+    <input type="password" name="password" required>
+
+    <button class="btn" type="submit">Войти</button>
+</form>
+
+{% if message %}
+<p style="color: green;">{{ message }}</p>
+{% endif %}
+
+   
+
+</section>
+
+<section>
+
+    <div class="link">Не получается войти?</div>
+
+    <button class="register-btn">Регистрация</button>
+
+    <div class="social-login">
+        <p>Войти через</p>
+        <img src="{% static 'img/vk.webp' %}" alt="VK">
+        <img src="{% static 'img/mail.png' %}" alt="Mail.ru">
+        <img src="{% static 'img/google.webp' %}" alt="Google">
+        <img src="{% static 'img/yandex.png' %}" alt="Yandex">
+        <img src="{% static 'img/apple.png' %}" alt="Apple">
+    </div>
+
+    <div class="languages">
+        <a href="#">русский</a>
+        <a href="#">english</a>
+        <a href="#">українська</a>
+        <a href="#">все языки</a>
+    </div>
+</section>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
